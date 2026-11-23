@@ -536,6 +536,10 @@ a:hover {
 }
 
 /* ---------- Publications (home + publications page) ---------- */
+.publications ol.bibliography {
+  list-style: none;
+  padding-left: 0;
+}
 .publications ol.bibliography li {
   margin-bottom: 0.9rem;
 }
@@ -560,16 +564,18 @@ a:hover {
   color: var(--gd-accent) !important;
   background: transparent !important;
 }
-.gd-home .publications ol.bibliography li {
+.publications ol.bibliography li {
+  list-style: none;
   padding: 1rem 1.2rem;
   border: 1px solid var(--gd-border);
   border-radius: 12px;
   background: var(--gd-surface);
 }
-.gd-home .publications .abbr {
+/* no venue badges are used, so drop the empty left column */
+.publications .abbr {
   display: none;
 }
-.gd-home .publications .row > [class*="col-sm-8"] {
+.publications .row > [class*="col-sm-8"] {
   flex: 0 0 100%;
   max-width: 100%;
   width: 100%;
