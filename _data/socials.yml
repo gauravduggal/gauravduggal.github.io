@@ -1,9 +1,14 @@
 # Social / profile links — al-folio v1
+# Keys must match jekyll-socials exactly (see its SOCIAL_ICONS/SOCIAL_URLS):
+# email, scholar_userid, linkedin_username, github_username, orcid_id, cv_pdf
+# Full URLs as keys (google-scholar, linkedin, github, orcid) crash the build
+# with "undefined method `split' for nil" in jekyll-socials.
+cv_pdf: /assets/pdf/Gaurav_duggal_full_resume.pdf
 email: gduggal@vt.edu
-google-scholar: https://scholar.google.co.in/citations?user=OklRZKgAAAAJ&hl=en
-linkedin: https://www.linkedin.com/in/gaurav-duggal-09416157/
-github: https://github.com/gauravduggal
-orcid: https://orcid.org/0000-0002-3765-5479
+scholar_userid: OklRZKgAAAAJ
+linkedin_username: gaurav-duggal-09416157
+github_username: gauravduggal
+orcid_id: 0000-0002-3765-5479
 # Both emails to publish, per Gaurav 2026-11-22:
 # Primary: gduggal@vt.edu, Personal: gauravduggal1729@gmail.com
-# Photo: use LinkedIn photo (to be supplied / downloaded from LinkedIn profile https://www.linkedin.com/in/gaurav-duggal-09416157/)
+# (second email is shown in the homepage bio in _pages/about.md)
