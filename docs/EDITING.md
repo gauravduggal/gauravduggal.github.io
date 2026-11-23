@@ -180,3 +180,8 @@ Unpublished pages (`published: false`): `_pages/research.md`, `_pages/projects.m
 - Preview: run `C:\website\devtools\preview.ps1`, then open http://127.0.0.1:4000/
 - Link check: `python C:\website\devtools\check_links.py` (add `--internal` for an offline check)
 - Deploy: push to `main`; GitHub Actions builds and publishes to the `gh-pages` branch.
+  The workflow only runs when matching files change (pages, data, templates, `.bib`, assets,
+  `.scss`, `_plugins/`); see the `paths:` list in `.github/workflows/deploy.yml`.
+- Stylesheet caching: `_plugins/css_cache_bust.rb` fingerprints `main.css?v=…` from
+  `assets/css/main.scss` + `_sass/**`, so browsers fetch new CSS after every style change.
+  (The theme's own fingerprint never changed, which left visitors on stale CSS.)
