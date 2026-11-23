@@ -1,0 +1,82 @@
+# CV data for Gaurav Duggal — al-folio v1 (RenderCV / JSONResume format in _data/cv.yml)
+# Advisors: Jeffrey H. Reed, R. Michael Buehrer, Harpreet S. Dhillon ONLY.
+# Nishith Tripathi is not listed here — he is a co-author, not a supervisor.
+- title: General
+  type: map
+  contents:
+    - name: Full Name
+      value: Gaurav Duggal
+    - name: Email
+      value: gduggal@vt.edu
+    - name: Personal Email
+      value: gauravduggal1729@gmail.com
+    - name: Website
+      value: https://gauravduggal.github.io/
+    - name: Google Scholar
+      value: https://scholar.google.co.in/citations?user=OklRZKgAAAAJ&hl=en
+    - name: LinkedIn
+      value: https://www.linkedin.com/in/gaurav-duggal-09416157/
+    - name: GitHub
+      value: https://github.com/gauravduggal
+    - name: ORCID
+      value: https://orcid.org/0000-0002-3765-5479
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD, Electrical and Computer Engineering
+      institution: Virginia Tech (Wireless@VT)
+      year: 2021–2026
+      description:
+        - Thesis: "Wireless Localization in Next-Generation Emergency Networks"
+        - Advisors: Jeffrey H. Reed, R. Michael Buehrer, Harpreet S. Dhillon
+    - title: M.Tech., Communications and Signal Processing
+      institution: IIIT Delhi
+      year: 2017–2019
+      description:
+        - Thesis: Automotive Radar Signal Processing
+        - Advisor: Prof. Shobha Sundar Ram
+    - title: B.E. (Hons.), Electrical and Electronics Engineering
+      institution: BITS Pilani, Hyderabad Campus
+      year: 2009–2013
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Wireless Systems Engineer
+      institution: Apple
+      year: Jul 2026–present
+      description:
+        - RF front-end systems for cellular connectivity
+    - title: Graduate Research Assistant
+      institution: Virginia Tech, Wireless@VT
+      year: Aug 2021–present
+    - title: ML and Signal Processing Research Intern
+      institution: NXP Semiconductor
+      year: Summer 2025
+      description:
+        - MIMO-OFDM WiFi gesture detection
+    - title: Research Intern
+      institution: Samsung Research America
+      year: Summer 2022, 2023
+    - title: RF Software Engineer
+      institution: Qualcomm
+      year: Jul 2019–Aug 2021
+
+- title: Awards and Fellowships
+  type: time_table
+  contents:
+    - title: Paul E. Torgersen Graduate Student Research Excellence Award, 1st place PhD
+      institution: Virginia Tech College of Engineering
+      year: 2026
+    - title: NIJ FY23 Graduate Research Fellowship ($166,500) — "Next Generation Emergency Networks"
+      institution: U.S. Department of Justice / National Institute of Justice, Award 15PNIJ-23-GG-01949-RESS
+      year: 2023–2026
+    - title: Pratt Fellowship ($1,000)
+      year: 2026
+    - title: Commonwealth Cyber Initiative Cyber Innovation Scholar ($2,000/yr)
+      year: 2024, 2025
+    - title: IEEE ComSoc Travel Grant ($1,250)
+      year: 2023
+    - title: Qualcomm Innovation Fellowship, finalist — "Joint radar-communication based wireless localisation"
+      year: 2022
