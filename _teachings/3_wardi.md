@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Wearable Applications, Research, Devices, Interactions (WARDI) DES513
-description: Teaching Assistant for the graduate course WARDI at IIIT Delhi, Monsoon 2018. Designed assignments and held tutorials on electronics and basic physics for wearable electronics. Course instructor: Dr. Aman Parnami.
+description: "Teaching Assistant for the graduate course WARDI at IIIT Delhi, Monsoon 2018. Designed assignments and held tutorials on electronics and basic physics for wearable electronics. Course instructor: Dr. Aman Parnami."
 img:
 importance: 3
 category: teaching

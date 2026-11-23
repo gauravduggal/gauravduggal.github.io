@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Probability and Statistics MTH201
-description: Teaching Assistant for the undergraduate course Probability and Statistics at IIIT Delhi, Winter 2018. Conducted tutorial sessions, cleared doubts, and corrected assignments. Course instructor: Dr. Sanjit Kaul.
+description: "Teaching Assistant for the undergraduate course Probability and Statistics at IIIT Delhi, Winter 2018. Conducted tutorial sessions, cleared doubts, and corrected assignments. Course instructor: Dr. Sanjit Kaul."
 img:
 importance: 2
 category: teaching
