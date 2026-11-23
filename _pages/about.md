@@ -11,7 +11,7 @@ profile:
     <p>Apple — Wireless Systems Engineering</p>
     <p>PhD, ECE, Virginia Tech (2021–2026)</p>
     <p>gduggal@vt.edu</p>
-    <p>gauravduggal1729@gmail.com</p>
+    <p>gduggal1729@gmail.com</p>
 news: true
 selected_papers: true
 social: true
