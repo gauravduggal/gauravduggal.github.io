@@ -1,1 +1,8 @@
-This is the source code to Jon Barron's public academic website: https://jonbarron.info/. You are welcome to clone this code for your own personal use, just please attribute the source to the original website or to this repo. If you do clone this website, feel free to add an attribution link to your own downstream website in index.html if you want.
+# Gaurav Duggal — personal website
+
+Personal academic website for Gaurav Duggal, built with [al-folio](https://github.com/alshedivat/al-folio) (v1.x, Jekyll) and deployed to GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`).
+
+- Home: bio, news, selected papers
+- Publications, Projects, Teaching, CV pages
+- Publications generated from `_bibliography/papers.bib`; CV from `_data/cv.yml`
+- Profile photo: `assets/img/prof_pic.jpg`; resume PDF: `assets/pdf/Gaurav_duggal_full_resume.pdf`
