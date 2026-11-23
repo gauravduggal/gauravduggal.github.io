@@ -611,6 +611,67 @@ a:hover {
   overflow-wrap: anywhere;
 }
 
+/* ---------- Projects & teaching pages ---------- */
+.gd-page {
+  margin: 0.5rem 0 2.5rem;
+}
+.gd-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.25rem;
+}
+.gd-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 12px;
+  background: var(--gd-accent-soft);
+  color: var(--gd-accent);
+  font-size: 1.15rem;
+}
+.gd-page .gd-card p {
+  font-size: 0.95rem;
+}
+.gd-tags-sm {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+.gd-tags-sm li {
+  padding: 0.2rem 0.65rem;
+  font-size: 0.78rem;
+}
+.gd-teach {
+  display: grid;
+  gap: 1rem;
+}
+.gd-teach-item h4 {
+  margin-top: 0.35rem;
+}
+.gd-teach-item p {
+  margin-bottom: 0.4rem;
+}
+.gd-code {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 6px;
+  background: var(--global-bg-color);
+  border: 1px solid var(--gd-border);
+  color: var(--gd-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.gd-small {
+  font-size: 0.88rem !important;
+}
+.gd-small i {
+  margin-right: 0.3rem;
+  color: var(--gd-accent-2);
+}
+
 /* ---------- Footer ---------- */
 footer.fixed-bottom,
 footer.sticky-bottom {
@@ -622,6 +683,7 @@ footer.sticky-bottom {
   .gd-cards {
     grid-template-columns: minmax(0, 1fr);
   }
+  .gd-grid-2,
   .gd-award,
   .gd-why,
   .gd-results,

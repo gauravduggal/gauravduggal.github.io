@@ -2,19 +2,47 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Personal and research projects.
+description: Hands-on hardware and signal-processing projects outside my main research.
 nav: true
 nav_order: 3
 ---
 
-### Micro Doppler Radar using HB100 and RCWL-0516
+<div class="gd-page gd-grid-2">
+  <article class="gd-card">
+    <span class="gd-icon"><i class="fa-solid fa-satellite-dish"></i></span>
+    <h4>Micro-Doppler radar using HB100 and RCWL-0516</h4>
+    <p>
+      I built a Doppler radar by sampling a Doppler radar front end with an Arduino ADC and streaming the
+      data over serial to a computer. In Python, I processed the samples with an STFT using a Hamming window.
+      The micro-Doppler signature of spinning blades shows up clearly in the spectrogram.
+    </p>
+    <ul class="gd-tags gd-tags-sm">
+      <li>Radar</li><li>Arduino</li><li>Python</li><li>STFT</li>
+    </ul>
+  </article>
 
-Implemented a Doppler radar by sampling a Doppler radar front end using an Arduino ADC and sending the data over serial to a computer. The digitally sampled signals were processed using an STFT algorithm with a Hamming window in Python. Micro-Doppler features of the blades are visible in the spectrogram output.
+  <article class="gd-card">
+    <span class="gd-icon"><i class="fa-solid fa-tower-broadcast"></i></span>
+    <h4>Phased-array antenna for an ADS-B receiver</h4>
+    <p>
+      In the Antenna Design course at IIIT Delhi, I built and tested a 16-element linear phased array for an
+      ADS-B receiver at 1090&nbsp;MHz, extending the receiver's range to 400&nbsp;km.
+    </p>
+    <ul class="gd-tags gd-tags-sm">
+      <li>Antennas</li><li>Phased array</li><li>1090 MHz</li><li>IIIT Delhi</li>
+    </ul>
+  </article>
 
-### Phased array antenna for an ADSB receiver
-
-Built and tested a 16-element linear phased array antenna for an ADS-B receiver to extend its range to 400 km, as part of the Antenna Design Course at IIIT Delhi. It operates at 1090 MHz.
-
-### Finding the value of Pi by using a probability based experiment
-
-Estimating pi from the probability that two random numbers are co-prime (6/pi^2), using a sequence of random trials. For every trial we pick two natural numbers from a uniform distribution between 1 and 100,000. The number of times the two numbers were co-prime divided by total trials tends to 6/pi^2.
+  <article class="gd-card">
+    <span class="gd-icon"><i class="fa-solid fa-dice"></i></span>
+    <h4>Estimating &pi; with a probability experiment</h4>
+    <p>
+      The probability that two random natural numbers are co-prime is 6/&pi;<sup>2</sup>. Each trial draws two
+      numbers uniformly between 1 and 100,000. Over many trials, the fraction of co-prime pairs converges to
+      6/&pi;<sup>2</sup>, which gives an estimate of &pi;.
+    </p>
+    <ul class="gd-tags gd-tags-sm">
+      <li>Probability</li><li>Monte Carlo</li>
+    </ul>
+  </article>
+</div>
