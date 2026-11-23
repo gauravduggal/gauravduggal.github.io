@@ -1,4 +1,4 @@
-{# Local override of al_folio_core 1.0.15 _includes/metadata.liquid. Only change: the {% else %} branch of the sameAs generator is guarded so plain-string social values (e.g. cv_pdf) do not push null. #}
+{% comment %} Local override of al_folio_core 1.0.15 _includes/metadata.liquid. Only change: the else branch of the sameAs generator is guarded so plain-string social values (e.g. cv_pdf) do not push null. {% endcomment %}
 {% if site.enable_google_verification or site.enable_bing_verification %}
   <!-- Website verification -->
   {% if site.enable_google_verification %}
