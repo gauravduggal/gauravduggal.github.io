@@ -1,0 +1,13 @@
+/*******************************************************************************
+ * Markdown section
+ * Free-text section body (e.g. About me). Content: page body or section.body
+ ******************************************************************************/
+
+/* ---------- Bio (Markdown section body) ---------- */
+.gd-bio p {
+  font-size: 1.05rem;
+  max-width: 48em;
+}
+.gd-bio + .gd-tags {
+  margin-top: 1.25rem;
+}

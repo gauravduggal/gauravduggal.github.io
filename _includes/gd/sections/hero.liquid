@@ -1,0 +1,33 @@
+{%- comment -%}
+  Hero: name, tagline, icon facts, buttons, photo.
+  Data: _data/profile.yml (or another _data file named by the section's `data:` key).
+{%- endcomment -%}
+{%- assign data_name = include.section.data | default: 'profile' -%}
+{%- assign p = site.data[data_name] -%}
+<section class="gd-hero">
+  <div class="gd-hero-text">
+    <h1 class="gd-name">{{ p.name | default: site.title }}</h1>
+    {%- if p.tagline %}
+      <p class="gd-lede">{{ p.tagline }}</p>
+    {%- endif %}
+    {%- if p.facts %}
+      <ul class="gd-facts">
+        {%- for f in p.facts %}
+          <li><i class="{{ f.icon }}"></i> {{ f.text }}</li>
+        {%- endfor %}
+      </ul>
+    {%- endif %}
+    {%- if p.buttons %}
+      <div class="gd-actions">
+        {%- for b in p.buttons %}
+          <a class="gd-btn{% if b.primary %} gd-btn-primary{% endif %}" href="{{ b.url }}"><i class="{{ b.icon }}"></i> {{ b.label }}</a>
+        {%- endfor %}
+      </div>
+    {%- endif %}
+  </div>
+  {%- if p.photo %}
+    <div class="gd-hero-photo">
+      <img src="{{ p.photo | relative_url }}" alt="{{ p.name | default: site.title }}" loading="eager">
+    </div>
+  {%- endif %}
+</section>

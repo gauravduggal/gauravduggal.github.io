@@ -1,0 +1,21 @@
+{%- comment -%}
+  NEWS ITEM: one row. Params: item (a _news document), date_format, images (true/false).
+{%- endcomment -%}
+{%- assign it = include.item -%}
+{%- assign it_has_img = false -%}
+{%- if it.image and include.images -%}{%- assign it_has_img = true -%}{%- endif -%}
+<li class="gd-news__item{% if it_has_img %} gd-news__item--media{% endif %}">
+  <span class="gd-news__date">{{ it.date | date: include.date_format }}</span>
+  <div class="gd-news__body">
+    <div class="gd-news__text">
+      {%- if it.inline -%}
+        {{ it.content | remove: '<p>' | remove: '</p>' | strip }}
+      {%- else -%}
+        <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
+      {%- endif -%}
+    </div>
+    {%- if it_has_img %}
+      {% include gd/ui/media.liquid src=it.image alt=it.image_alt fit=it.image_fit class="gd-news__img" %}
+    {%- endif %}
+  </div>
+</li>

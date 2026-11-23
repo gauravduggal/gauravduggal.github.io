@@ -1,0 +1,8 @@
+{%- comment -%}
+  LINK PILLS: a row of small rounded links.
+  Params: links (list of { label, url }), class (extra classes for the row)
+  Styles: _sass/gd/components/_pills.scss
+{%- endcomment -%}
+<p class="gd-pills{% if include.class %} {{ include.class }}{% endif %}">
+  {%- for l in include.links %}<a class="gd-pill" href="{{ l.url }}">{{ l.label }}</a>{% endfor -%}
+</p>

@@ -3,8 +3,9 @@ layout: page
 permalink: /teaching/
 title: teaching
 description: Teaching assistant for radar, probability and wearable-electronics courses.
-nav: true
-nav_order: 4
+nav: false
+published: false
+nav_order: 5
 ---
 
 <div class="gd-page gd-teach">

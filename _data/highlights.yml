@@ -1,0 +1,70 @@
+# Home-page "Highlights" tiles, in display order (rendered by _includes/gd/tile.liquid).
+# Fields (all optional except title):
+#   title, image, image_alt, image_fit (true = show whole image, e.g. charts/posters;
+#   false/omitted = crop to fill), authors (your name is bolded automatically),
+#   venue, description, links: [{label, url}]
+# Images live in assets/img/research/ (480x360 works well).
+
+- title: Paul E. Torgersen Graduate Student Research Excellence Award, 1st place (PhD)
+  image: /assets/img/research/hl_awards.jpg
+  image_alt: "Torgersen Award poster: Wireless Localization for Next Generation Emergency Networks"
+  image_fit: true
+  venue: Virginia Tech College of Engineering, 2026
+  description: >-
+    My PhD on locating first responders inside buildings, when GPS can't reach them and walls block the
+    direct radio path, won first place in the PhD category.
+  links:
+    - { label: 5-minute video, url: /assets/video/Gaurav_Duggal.mp4 }
+    - { label: Poster, url: /assets/pdf/Torgersen_Poster.pdf }
+    - { label: VT News, url: "https://news.vt.edu/articles/2026/04/eng-coe-torgersen-research-winners-2026.html" }
+
+- title: NIJ Graduate Research Fellowship ($166,500)
+  image: /assets/img/research/hl_nij.jpg
+  image_alt: Drones outside a building sending signals in through the windows
+  venue: U.S. Department of Justice, National Institute of Justice, 2023&ndash;2026
+  description: >-
+    A three-year fellowship for my PhD project, "Next Generation Emergency Networks," on accurately
+    locating public-safety responders indoors.
+  links:
+    - { label: NIJ award, url: "https://nij.ojp.gov/funding/awards/15pnij-23-gg-01949-ress" }
+    - { label: Fellows list, url: "https://nij.ojp.gov/funding/fellowships/graduate-research-fellowship-program-past-and-present-fellows" }
+
+- title: Diffraction-Aided Wireless Positioning
+  image: /assets/img/research/hl_diffraction.jpg
+  image_alt: Signal from a drone bending around a window edge into a room
+  image_fit: true
+  authors: Gaurav Duggal, R. Michael Buehrer, Harpreet S. Dhillon, Jeffrey H. Reed
+  venue: IEEE Transactions on Wireless Communications, 2025
+  description: >-
+    Revisits electromagnetic diffraction theory to model how signals bend around building edges when the
+    direct path is blocked. Estimating these bent path lengths directly greatly improves 3D and floor-level
+    (z-axis) accuracy when locating people inside buildings.
+  links:
+    - { label: Paper, url: "https://doi.org/10.1109/TWC.2025.3537959" }
+
+- title: Optimal Anchor Placement for Wireless Localization in Mixed LOS and NLOS Scenarios
+  image: /assets/img/research/hl_anchor_polygon.jpg
+  image_alt: "Closed-polygon construction: anchor ranging-information vectors placed head to tail form a closed polygon (optimal placement condition)"
+  image_fit: true
+  authors: Gaurav Duggal, R. Michael Buehrer, Harpreet S. Dhillon, Jeffrey H. Reed
+  venue: IEEE Transactions on Signal Processing, 2026 &middot; Open access
+  description: >-
+    A Fisher-information framework for placing localization anchors when some signal paths are blocked.
+    It extends optimal placement from one known target to a whole region, giving two practical algorithms
+    for robust designs across line-of-sight and blocked conditions.
+  links:
+    - { label: Paper, url: "https://doi.org/10.1109/TSP.2026.3732260" }
+
+- title: Doppler-Resilient 802.11ad-Based Automotive Joint Radar-Communications
+  image: /assets/img/research/hl_radar.jpg
+  image_alt: Range-Doppler map from the 802.11ad-based automotive radar
+  image_fit: true
+  authors: Gaurav Duggal, S. Vishwakarma, Kumar Vijay Mishra, Shobha Sundar Ram
+  venue: IEEE Transactions on Aerospace and Electronic Systems, 2020
+  description: >-
+    Adds Prouhet-Thue-Morse sequences to the 802.11ad preamble so one signal serves as both a communication
+    link and a radar, staying reliable at speeds up to &plusmn;144&nbsp;km/h and revealing the fine motion of
+    pedestrians, bicycles and cars.
+  links:
+    - { label: Paper, url: "https://doi.org/10.1109/TAES.2020.2990393" }
+    - { label: arXiv, url: "https://arxiv.org/abs/1902.01306" }

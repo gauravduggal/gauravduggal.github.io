@@ -1,0 +1,6 @@
+{%- comment -%}
+  MEDIA: one picture. Used by the tile and by news items.
+  Params: src (required), alt, fit (true = contain, else cover), class, loading ("lazy" default)
+  Styles: _sass/gd/components/_media.scss
+{%- endcomment -%}
+<img class="gd-media{% if include.fit %} gd-media--fit{% endif %}{% if include.class %} {{ include.class }}{% endif %}" src="{{ include.src | relative_url }}" alt="{{ include.alt | strip_html | escape }}" loading="{{ include.loading | default: 'lazy' }}">

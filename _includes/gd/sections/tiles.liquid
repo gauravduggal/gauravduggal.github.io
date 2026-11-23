@@ -1,0 +1,13 @@
+{%- comment -%}
+  SECTION "tiles": a list of tiles from a data file.
+  Keys: data (required, name of a list in _data/, e.g. highlights -> _data/highlights.yml),
+        limit (optional, first N items), variant (optional, "md" default | "sm")
+  Each list item uses the tile interface documented in _includes/gd/ui/tile.liquid.
+{%- endcomment -%}
+{%- assign items = site.data[include.section.data] -%}
+{%- assign n = include.section.limit | default: items.size -%}
+<div class="gd-tile-list">
+  {%- for item in items limit: n %}
+    {% include gd/ui/tile.liquid tile=item variant=include.section.variant %}
+  {%- endfor %}
+</div>

@@ -1,0 +1,23 @@
+/*******************************************************************************
+ * CV PAGE: fixes for the al_folio_cv templates (data: _data/cv.yml).
+ ******************************************************************************/
+
+/* Date badges ("Dec 2018 - Feb 2019", "Summer 2025") may wrap instead of spilling into the title */
+.cv .date-column .badge,
+.date-column .badge {
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.35;
+  padding: 0.3em 0.55em;
+}
+@media (min-width: 768px) {
+  .cv .list-group-item .row > .date-column {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .cv .list-group-item .row > .date-column + [class*="col-"] {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+}

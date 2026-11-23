@@ -1,0 +1,19 @@
+/*******************************************************************************
+ * PUBLICATIONS PAGE: page-level layout only. Each paper is a .gd-tile
+ * (components/_tile.scss) rendered by _includes/gd/adapters/bib_entry.liquid.
+ * jekyll-scholar wraps the tiles in <h2 class="bibliography">YEAR</h2><ol class="bibliography"><li>.
+ ******************************************************************************/
+
+.publications ol.bibliography {
+  list-style: none;
+  padding-left: 0;
+}
+.publications ol.bibliography > li {
+  list-style: none;
+  margin-bottom: 0.9rem;
+}
+.publications h2.bibliography {
+  color: var(--gd-accent);
+  border-top: none;
+  font-weight: 700;
+}

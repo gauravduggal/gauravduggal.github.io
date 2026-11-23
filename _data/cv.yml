@@ -25,8 +25,8 @@ cv:
         start_date: 2021
         end_date: 2026
         highlights:
-          - Thesis: "Wireless Localization in Next-Generation Emergency Networks"
-          - Advisors: Jeffrey H. Reed, R. Michael Buehrer, Harpreet S. Dhillon
+          - 'Thesis: "Wireless Localization in Next-Generation Emergency Networks"'
+          - "Advisors: Jeffrey H. Reed, R. Michael Buehrer, Harpreet S. Dhillon"
 
       - institution: IIIT Delhi
         location: New Delhi, India
@@ -35,8 +35,8 @@ cv:
         start_date: 2017
         end_date: 2019
         highlights:
-          - Thesis: Automotive Radar Signal Processing
-          - Advisor: Prof. Shobha Sundar Ram
+          - "Thesis: Automotive Radar Signal Processing"
+          - "Advisor: Shobha Sundar Ram"
 
       - institution: BITS Pilani, Hyderabad Campus
         location: Hyderabad, India
@@ -46,36 +46,96 @@ cv:
         end_date: 2013
 
     Experience:
+      # All jobs, newest first. Source: Gaurav_Resume.pdf (2026). Hertzwell dates from the older
+      # resume (Dec 2018 - Feb 2019), which fit the timeline; the 2026 resume says May 2019 - May 2020.
       - company: Apple
         position: Wireless Systems Engineer
         start_date: Jul 2026
         end_date: present
         highlights:
-          - RF front-end systems for cellular connectivity
+          - RF front-end systems for cellular connectivity.
 
       - company: Virginia Tech, Wireless@VT
         position: Graduate Research Assistant
+        location: Blacksburg, VA
         start_date: Aug 2021
         end_date: 2026
         highlights:
-          - Wireless localization for public safety and next-generation emergency networks
+          - Won a U.S. Department of Justice NIJ Graduate Research Fellowship ($166,500) as Principal Investigator with my own proposal, "Next Generation Emergency Networks."
+          - Developed wireless localization techniques for non-line-of-sight scenarios, grounded in electromagnetics, optimization and estimation theory.
+          - Designed OFDM-based wireless positioning testbeds with software radios and off-the-shelf Wi-Fi hardware.
+          - With Prof. R. Michael Buehrer, developed a wireless communications course with 10 hands-on labs using software radios and AI-assisted tools.
+          - Contributed to research proposals on integrated sensing and communication.
 
-      - company: NXP Semiconductor
-        position: ML and Signal Processing Research Intern
-        start_date: Summer 2025
-        end_date: Summer 2025
+      - company: NXP Semiconductors
+        position: Machine Learning and Signal Processing Research Intern
+        date: Summer 2025
         highlights:
-          - MIMO-OFDM WiFi gesture detection
+          - Developed MIMO-OFDM signal processing for Wi-Fi-based gesture detection and recognition.
+          - Designed compact hybrid machine-learning models for edge hardware.
+          - Submitted a patent application on Wi-Fi-based sensing and recognition of human activities.
 
       - company: Samsung Research America
-        position: Research Intern
-        start_date: Summer 2022
-        end_date: Summer 2023
+        position: Machine Learning and Signal Processing Research Intern
+        location: Plano, TX
+        date: Summer 2023
+        highlights:
+          - Built a physics-based synthetic radar data pipeline to augment ML datasets for human activity recognition, validated on real radar data; led to a patent.
+          - Best Poster Award, 3rd place, for "Synthetic Radar Pipeline for Human Activity Recognition."
+
+      - company: Samsung Research America
+        position: Machine Learning and Signal Processing Research Intern
+        location: Plano, TX
+        date: Summer 2022
+        highlights:
+          - Developed and validated a UWB-radar gesture recognition pipeline, from dataset collection through radar signal processing to ML classification.
 
       - company: Qualcomm
         position: RF Software Engineer
+        location: India
         start_date: Jul 2019
         end_date: Aug 2021
+        highlights:
+          - Board bring-up and system validation of Qualcomm modems.
+          - Algorithms for RF front-end management and resource allocation in Qualcomm modems.
+
+      - company: Hertzwell
+        position: Signal Processing Intern
+        location: Singapore
+        start_date: Dec 2018
+        end_date: Feb 2019
+        highlights:
+          - Built a complete signal processing pipeline for high-resolution MIMO automotive radar, covering waveform design, ground clutter, target and receiver modeling.
+
+      - company: Tonbo Imaging
+        position: Member of Technical Staff
+        location: India
+        start_date: May 2015
+        end_date: Jun 2016
+        highlights:
+          - Developed embedded firmware for a thermal imaging camera system used by defense forces worldwide.
+
+      - company: Ducere Technologies
+        position: Embedded Electronics Engineer
+        location: India
+        start_date: Jul 2013
+        end_date: Apr 2015
+        highlights:
+          - Built early-stage wearable technology prototypes across physics, electronics and software.
+
+      - company: Cranfield University
+        position: Research Intern
+        location: United Kingdom
+        date: Summer 2012
+        highlights:
+          - Developed a GPS-aided inertial navigation system (INS) for ground vehicle navigation.
+
+      - company: Valonia
+        position: Co-Founder
+        start_date: 2010
+        end_date: 2013
+        highlights:
+          - Co-founded an education startup running hands-on electronics and robotics workshops for 2,500 university students across 11 programs.
 
     Awards:
       - title: Paul E. Torgersen Graduate Student Research Excellence Award, 1st place PhD
@@ -87,7 +147,7 @@ cv:
       - title: NIJ FY23 Graduate Research Fellowship ($166,500)
         date: 2023-2026
         awarder: U.S. Department of Justice / National Institute of Justice
-        url: https://nij.ojp.gov/funding/fellowships/graduate-research-fellowship-program-past-and-present-fellows
+        url: https://nij.ojp.gov/funding/awards/15pnij-23-gg-01949-ress
         summary: '"Next Generation Emergency Networks" (Award 15PNIJ-23-GG-01949-RESS).'
 
       - title: Pratt Fellowship ($1,000)

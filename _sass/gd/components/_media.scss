@@ -1,0 +1,16 @@
+/*******************************************************************************
+ * MEDIA: one picture. Markup: _includes/gd/ui/media.liquid
+ *   .gd-media        crop to fill the box (photos, illustrations)
+ *   .gd-media--fit   show the whole image (charts, posters, diagrams)
+ * Size comes from the component using it (e.g. .gd-tile__media, .gd-news__img).
+ ******************************************************************************/
+
+.gd-media {
+  display: block;
+  object-fit: cover;
+  background: #fff;
+}
+.gd-media--fit {
+  object-fit: contain;
+  padding: 5px;
+}

@@ -1,0 +1,43 @@
+{%- comment -%}
+  NEWS LIST: used by the home "news" section and the /news/ page.
+  Params:
+    group_by_year=true    a heading per year, items labelled by month
+    count=N               at most N items (flat list only)
+    highlights_only=true  only _news/ items with `highlight: true`
+    images=false          hide item pictures (e.g. on the home page)
+  Item front matter (_news/*.md): date, inline: true, highlight, image, image_alt, image_fit
+  Styles: _sass/gd/components/_news.scss
+{%- endcomment -%}
+{%- assign news = site.news | reverse -%}
+{%- if include.highlights_only -%}
+  {%- assign news = news | where_exp: 'item', 'item.highlight == true' -%}
+{%- endif -%}
+{%- assign news_images = true -%}
+{%- if include.images == false -%}{%- assign news_images = false -%}{%- endif -%}
+
+{%- if news.size == 0 -%}
+  <p>No news so far...</p>
+{%- elsif include.group_by_year -%}
+  {%- assign years = news | group_by_exp: 'item', "item.date | date: '%Y'" -%}
+  <div class="gd-news gd-news--by-year">
+    {%- for y in years %}
+      <section class="gd-news__year" id="y{{ y.name }}">
+        <h2 class="gd-news__year-label">{{ y.name }}</h2>
+        <ul class="gd-news__list">
+          {%- for item in y.items %}
+            {% include gd/news/item.liquid item=item date_format='%b' images=news_images %}
+          {%- endfor %}
+        </ul>
+      </section>
+    {%- endfor %}
+  </div>
+{%- else -%}
+  {%- assign n = include.count | default: news.size -%}
+  <div class="gd-news gd-news--flat">
+    <ul class="gd-news__list">
+      {%- for item in news limit: n %}
+        {% include gd/news/item.liquid item=item date_format='%b %Y' images=news_images %}
+      {%- endfor %}
+    </ul>
+  </div>
+{%- endif -%}

@@ -1,0 +1,66 @@
+/*******************************************************************************
+ * Hero section
+ * Name, tagline, icon facts, buttons, photo. Data: _data/profile.yml
+ ******************************************************************************/
+
+/* ---------- Hero ---------- */
+.gd-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 2rem 0 2.5rem;
+}
+.gd-eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--gd-accent);
+  font-weight: 650;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.gd-name {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  letter-spacing: -0.03em;
+}
+.gd-lede {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  max-width: 36em;
+}
+.gd-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+  color: var(--gd-muted);
+}
+.gd-facts i {
+  width: 1.3em;
+  color: var(--gd-accent-2);
+}
+.gd-hero-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: var(--gd-shadow);
+}
+
+@media (max-width: 640px) {
+  .gd-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding-top: 1rem;
+  }
+  .gd-hero-photo {
+    order: -1;
+    max-width: 180px;
+  }
+}

@@ -1,0 +1,106 @@
+/*******************************************************************************
+ * NEWS. Markup: _includes/gd/news/list.liquid + item.liquid
+ *   .gd-news--flat / --by-year     home list ("Jul 2026") / news page grouped by year
+ *   .gd-news__year, __year-label   one year block and its big heading
+ *   .gd-news__item(--media)        one row (with a picture on the right)
+ *   .gd-news__date / __body / __text / __img
+ ******************************************************************************/
+
+.gd-news__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gd-news__item {
+  display: grid;
+  grid-template-columns: 4.2rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--gd-border);
+}
+.gd-news__list > .gd-news__item:first-child {
+  border-top: none;
+}
+.gd-news--flat .gd-news__item {
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+}
+.gd-news__date {
+  padding-top: 0.15rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gd-accent-2);
+  white-space: nowrap;
+}
+.gd-news__body {
+  min-width: 0;
+}
+.gd-news__text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Row with a picture: text left, picture right */
+.gd-news__item--media {
+  align-items: center;
+  margin: 0.35rem 0;
+  padding: 0.9rem 1rem 0.9rem 0;
+}
+.gd-news__item--media .gd-news__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 1.1rem;
+  align-items: center;
+}
+.gd-news__img {
+  width: 190px;
+  height: 125px;
+  border-radius: 10px;
+  border: 1px solid var(--gd-border);
+}
+
+/* Grouped by year (/news/) */
+.gd-news__year {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 1.4rem 0 0.6rem;
+  border-top: 1px solid var(--gd-border);
+}
+.gd-news__year:first-child {
+  border-top: none;
+  padding-top: 0.4rem;
+}
+.gd-news__year-label {
+  position: sticky;
+  top: 4.5rem;
+  align-self: start;
+  margin: 0;
+  font-size: 1.9rem !important;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--gd-accent);
+}
+
+@media (max-width: 640px) {
+  .gd-news__year {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.4rem;
+  }
+  .gd-news__year-label {
+    position: static;
+  }
+  .gd-news--flat .gd-news__item {
+    grid-template-columns: 4.8rem minmax(0, 1fr);
+    gap: 0.6rem;
+  }
+  .gd-news__item--media .gd-news__body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .gd-news__img {
+    width: 100%;
+    max-width: 320px;
+    height: 160px;
+  }
+}

@@ -1,0 +1,77 @@
+{%- comment -%}
+  ADAPTER: one jekyll-scholar BibTeX `entry` -> the shared tile (ui/tile.liquid).
+  Called from _layouts/bib.liquid, which jekyll-scholar renders for every paper
+  (Publications page and the home "publications" section).
+
+  BibTeX fields used:
+    title, author, journal | booktitle | school, month, year, note
+    doi -> link target (else url, else arxiv)
+    preview = {file.jpg}  -> thumbnail from assets/img/publication_preview/
+    arxiv (with doi), pdf, code, website -> extra pills
+{%- endcomment -%}
+
+{%- comment -%} Link target: DOI, else url, else arXiv {%- endcomment -%}
+{%- assign bib_url = nil -%}
+{%- if entry.doi -%}
+  {%- capture bib_url %}https://doi.org/{{ entry.doi }}{% endcapture -%}
+{%- elsif entry.url -%}
+  {%- assign bib_url = entry.url -%}
+{%- elsif entry.arxiv -%}
+  {%- capture bib_url %}https://arxiv.org/abs/{{ entry.arxiv }}{% endcapture -%}
+{%- endif -%}
+
+{%- comment -%} Authors: "A, B, C, and D" {%- endcomment -%}
+{%- capture bib_authors -%}
+  {%- for a in entry.author_array -%}
+    {%- unless forloop.first -%}
+      {%- if forloop.last -%}{%- if forloop.length > 2 -%},{%- endif %} and {% else %}, {% endif -%}
+    {%- endunless -%}
+    {{- a.first }} {{ a.last -}}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- comment -%} Venue: "Journal, Month Year" {%- endcomment -%}
+{%- if entry.type == 'article' -%}
+  {%- assign bib_where = entry.journal -%}
+{%- else -%}
+  {%- assign bib_where = entry.booktitle | default: entry.school | default: entry.publisher -%}
+{%- endif -%}
+{%- capture bib_venue -%}
+  {{- bib_where -}}
+  {%- if bib_where and entry.year %}, {% endif -%}
+  {%- if entry.month %}{{ entry.month | capitalize }} {% endif -%}
+  {{- entry.year -}}
+{%- endcapture -%}
+
+{%- comment -%} Thumbnail {%- endcomment -%}
+{%- assign bib_image = nil -%}
+{%- if entry.preview -%}
+  {%- if entry.preview contains '://' -%}
+    {%- assign bib_image = entry.preview -%}
+  {%- else -%}
+    {%- assign bib_image = entry.preview | prepend: '/assets/img/publication_preview/' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} Extra links (the title/tile already links to the paper) {%- endcomment -%}
+{%- capture bib_links -%}
+  {%- if entry.arxiv and entry.doi %}<a class="gd-pill" href="https://arxiv.org/abs/{{ entry.arxiv }}">arXiv</a>{% endif -%}
+  {%- if entry.pdf %}<a class="gd-pill" href="{% if entry.pdf contains '://' %}{{ entry.pdf }}{% else %}{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}">PDF</a>{% endif -%}
+  {%- if entry.code %}<a class="gd-pill" href="{{ entry.code }}">Code</a>{% endif -%}
+  {%- if entry.website %}<a class="gd-pill" href="{{ entry.website }}">Website</a>{% endif -%}
+{%- endcapture -%}
+
+{%- capture bib_alt %}Figure from: {{ entry.title | strip_html }}{% endcapture -%}
+{% include gd/ui/tile.liquid
+  variant="sm"
+  id=entry.key
+  title=entry.title
+  url=bib_url
+  image=bib_image
+  image_alt=bib_alt
+  image_fit=true
+  authors=bib_authors
+  venue=bib_venue
+  note=entry.note
+  links_html=bib_links
+%}

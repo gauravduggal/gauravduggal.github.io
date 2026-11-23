@@ -1,0 +1,11 @@
+{%- comment -%}
+  Free text. Uses the section's `body:` (Markdown) if given, otherwise the page body
+  (the Markdown below the page's front matter).
+{%- endcomment -%}
+<div class="gd-bio">
+  {%- if include.section.body -%}
+    {{ include.section.body | markdownify }}
+  {%- else -%}
+    {{ include.body }}
+  {%- endif -%}
+</div>

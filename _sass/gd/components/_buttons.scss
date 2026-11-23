@@ -1,0 +1,53 @@
+/*******************************************************************************
+ * Buttons
+ * .gd-btn pill buttons (hero actions, banners).
+ ******************************************************************************/
+
+/* ---------- Buttons ---------- */
+.gd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.gd-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--gd-border);
+  background: var(--global-bg-color);
+  color: var(--gd-text) !important;
+  font-size: 0.9rem;
+  font-weight: 550;
+  line-height: 1.2;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.gd-btn:hover {
+  text-decoration: none;
+  border-color: var(--gd-accent);
+  transform: translateY(-1px);
+  box-shadow: var(--gd-shadow);
+}
+.gd-btn-primary {
+  background: var(--gd-accent);
+  border-color: var(--gd-accent);
+  color: #fff !important;
+}
+.gd-btn-primary:hover {
+  background: var(--gd-accent-2);
+  border-color: var(--gd-accent-2);
+}
+.gd-btn-light {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff !important;
+}
+.gd-btn-light:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #fff;
+}

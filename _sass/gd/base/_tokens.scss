@@ -1,0 +1,45 @@
+/*******************************************************************************
+ * Design tokens
+ * Colours, radius, shadow for light + dark. Every component reads these variables.
+ ******************************************************************************/
+
+:root {
+  --gd-accent: #861f41; /* VT maroon */
+  --gd-accent-2: #e5751f; /* VT burnt orange */
+  --gd-accent-soft: #f8eef1;
+  --gd-surface: #faf8f7;
+  --gd-border: #ebe6e3;
+  --gd-text: #1d1d1f;
+  --gd-muted: #6b6b70;
+  --gd-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
+  --gd-radius: 16px;
+
+  --global-theme-color: var(--gd-accent);
+  --global-hover-color: var(--gd-accent-2);
+  --global-text-color: var(--gd-text);
+  --global-text-color-light: var(--gd-muted);
+  --global-footer-bg-color: #f3f0ee;
+  --global-footer-text-color: #6b6b70;
+  --global-footer-link-color: #861f41;
+}
+
+html[data-theme="dark"] {
+  --gd-accent: #f08a4b;
+  --gd-accent-2: #ffb27a;
+  --gd-accent-soft: #2c2326;
+  --gd-surface: #232326;
+  --gd-border: #36363b;
+  --gd-text: #ececef;
+  --gd-muted: #a1a1a8;
+  --gd-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  --global-bg-color: #18181a;
+  --global-theme-color: var(--gd-accent);
+  --global-hover-color: var(--gd-accent-2);
+  --global-text-color: var(--gd-text);
+  --global-text-color-light: var(--gd-muted);
+  --global-card-bg-color: var(--gd-surface);
+  --global-footer-bg-color: #111113;
+  --global-footer-text-color: #a1a1a8;
+  --global-footer-link-color: #f08a4b;
+}

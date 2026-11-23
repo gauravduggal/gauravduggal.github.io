@@ -1,0 +1,57 @@
+/*******************************************************************************
+ * Layout
+ * Page wrapper and the generic section shell: heading row + "more" link.
+ ******************************************************************************/
+
+/* =============================================================================
+ * Home page
+ * ========================================================================== */
+.gd-home {
+  padding-top: 0.5rem;
+}
+.gd-home h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+.gd-home h3 {
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+.gd-muted {
+  color: var(--gd-muted);
+}
+
+/* ---------- Sections ---------- */
+.gd-section {
+  padding: 3rem 0 0.5rem;
+}
+.gd-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gd-border);
+}
+.gd-section-head h2 a {
+  color: inherit;
+}
+.gd-more {
+  font-size: 0.9rem;
+  font-weight: 550;
+  white-space: nowrap;
+}
+.gd-subhead {
+  margin: 2rem 0 1rem;
+}
+
+@media (max-width: 640px) {
+  .gd-section {
+    padding-top: 2.25rem;
+  }
+  .post-header .post-title {
+    font-size: 2rem;
+  }
+}

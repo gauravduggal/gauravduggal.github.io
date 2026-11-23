@@ -1,11 +1,11 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: CV
 nav: true
-nav_order: 5
+nav_order: 6
 cv_pdf: assets/pdf/Gaurav_duggal_full_resume.pdf
-description: Curriculum vitae. Generated from _data/cv.yml.
+description: Education, experience and awards. The PDF version is linked on the right.
 toc:
   sidebar: left
 ---

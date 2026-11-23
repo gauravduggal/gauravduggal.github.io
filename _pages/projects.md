@@ -3,8 +3,9 @@ layout: page
 title: projects
 permalink: /projects/
 description: Hands-on hardware and signal-processing projects outside my main research.
-nav: true
-nav_order: 3
+nav: false
+published: false
+nav_order: 4
 ---
 
 <div class="gd-page gd-grid-2">

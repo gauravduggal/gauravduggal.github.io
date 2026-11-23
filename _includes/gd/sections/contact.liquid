@@ -1,0 +1,5 @@
+{%- comment -%} Social icons from _data/socials.yml, with optional `text:` (Markdown) above them. {%- endcomment -%}
+{%- if include.section.text %}{{ include.section.text | markdownify }}{% endif %}
+<div class="social">
+  <div class="contact-icons">{% social_links %}</div>
+</div>

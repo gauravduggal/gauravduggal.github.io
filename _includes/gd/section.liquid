@@ -1,0 +1,26 @@
+{%- comment -%}
+  Generic section shell. Renders the heading row (title + optional "more" link) and
+  hands the body to _includes/gd/sections/<type>.liquid.
+
+  Section keys (from a page's `sections:` front matter):
+    type   (required)  hero | markdown | tiles | news | publications | contact
+    id, title, class   optional
+    more: { label, url }  optional link at the right of the heading
+  Plus any keys the section type reads (see each file in gd/sections/).
+{%- endcomment -%}
+{%- assign s = include.section -%}
+{%- if s.type == 'hero' -%}
+  {% include gd/sections/hero.liquid section=s %}
+{%- else -%}
+  <section class="gd-section{% if s.class %} {{ s.class }}{% endif %}"{% if s.id %} id="{{ s.id }}"{% endif %}>
+    {%- if s.title %}
+      <div class="gd-section-head">
+        <h2>{{ s.title }}</h2>
+        {%- if s.more %}
+          <a class="gd-more" href="{{ s.more.url | relative_url }}">{{ s.more.label }} &rarr;</a>
+        {%- endif %}
+      </div>
+    {%- endif %}
+    {% include gd/sections/{{ s.type }}.liquid section=s body=include.body %}
+  </section>
+{%- endif -%}

@@ -1,0 +1,69 @@
+{%- comment -%}
+  TILE: the shared card component (image left, text right).
+  Used by: the home "Highlights" tiles (sections/tiles.liquid) and every paper on the
+  Publications page (adapters/bib_entry.liquid). Styles: _sass/gd/components/_tile.scss
+
+  Interface. Pass fields one by one, or as a hash with tile=..., or both
+  (an explicit field wins):
+    title        required  heading text
+    url          optional  makes the WHOLE tile a link (hover highlight + click anywhere)
+    image        optional  path or URL of the picture; without it the text spans the tile
+    image_alt    optional  alt text (defaults to the title)
+    image_fit    optional  true = show the whole image (charts, posters); default crops to fill
+    authors      optional  "A, B and C"; the site owner's name (site.title) is bolded
+    venue        optional  e.g. "IEEE Transactions on …, 2025"
+    note         optional  short status line, e.g. "Open access"
+    description  optional  one or two sentences
+    links        optional  list of { label, url } shown as pills
+    links_html   optional  pre-rendered pills (for adapters that cannot build lists)
+    variant      optional  "md" (default: tall, full-bleed image) | "sm" (compact, inset thumbnail)
+                           (not called "size": Liquid's .size on a hash returns its key count)
+    id           optional  HTML id (anchor)
+{%- endcomment -%}
+{%- assign t = include.tile -%}
+{%- assign tile_title = include.title | default: t.title -%}
+{%- assign tile_url = include.url | default: t.url -%}
+{%- assign tile_image = include.image | default: t.image -%}
+{%- assign tile_image_alt = include.image_alt | default: t.image_alt | default: tile_title -%}
+{%- assign tile_image_fit = include.image_fit | default: t.image_fit -%}
+{%- assign tile_authors = include.authors | default: t.authors -%}
+{%- assign tile_venue = include.venue | default: t.venue -%}
+{%- assign tile_note = include.note | default: t.note -%}
+{%- assign tile_description = include.description | default: t.description -%}
+{%- assign tile_links = include.links | default: t.links -%}
+{%- assign tile_links_html = include.links_html | default: t.links_html | strip -%}
+{%- assign tile_variant = include.variant | default: t.variant | default: 'md' -%}
+{%- assign tile_id = include.id | default: t.id -%}
+{%- capture tile_me %}<strong>{{ site.title }}</strong>{% endcapture -%}
+
+<article class="gd-tile gd-tile--{{ tile_variant }}{% unless tile_image %} gd-tile--no-media{% endunless %}{% if tile_url %} gd-tile--link{% endif %}"{% if tile_id %} id="{{ tile_id }}"{% endif %}>
+  {%- if tile_image %}
+    {% include gd/ui/media.liquid src=tile_image alt=tile_image_alt fit=tile_image_fit class="gd-tile__media" %}
+  {%- endif %}
+  <div class="gd-tile__body">
+    <h3 class="gd-tile__title">
+      {%- if tile_url -%}
+        <a class="gd-tile__link" href="{{ tile_url }}">{{ tile_title }}</a>
+      {%- else -%}
+        {{ tile_title }}
+      {%- endif -%}
+    </h3>
+    {%- if tile_authors %}
+      <p class="gd-tile__authors">{{ tile_authors | replace: site.title, tile_me }}</p>
+    {%- endif %}
+    {%- if tile_venue %}
+      <p class="gd-tile__venue">{{ tile_venue }}</p>
+    {%- endif %}
+    {%- if tile_note %}
+      <p class="gd-tile__note">{{ tile_note }}</p>
+    {%- endif %}
+    {%- if tile_description %}
+      <p class="gd-tile__desc">{{ tile_description }}</p>
+    {%- endif %}
+    {%- if tile_links %}
+      {% include gd/ui/link_pills.liquid links=tile_links class="gd-tile__links" %}
+    {%- elsif tile_links_html != '' %}
+      <p class="gd-pills gd-tile__links">{{ tile_links_html }}</p>
+    {%- endif %}
+  </div>
+</article>

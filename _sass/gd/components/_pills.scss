@@ -1,0 +1,25 @@
+/*******************************************************************************
+ * LINK PILLS: a row of small rounded links. Markup: _includes/gd/ui/link_pills.liquid
+ ******************************************************************************/
+
+.gd-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+}
+.gd-pills:empty {
+  display: none;
+}
+.gd-pill {
+  padding: 0.12rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--gd-border);
+  background: var(--global-bg-color);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.gd-pill:hover {
+  border-color: var(--gd-accent);
+  text-decoration: none;
+}

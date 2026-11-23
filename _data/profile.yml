@@ -1,0 +1,34 @@
+# Home-page hero (rendered by _includes/gd/sections/hero.liquid).
+# Icons: Font Awesome classes (https://fontawesome.com/search) or Academicons ("ai ai-...").
+name: Gaurav Duggal
+photo: /assets/img/prof_pic.jpg
+tagline: >-
+  I work on wireless systems, from theory to design.
+
+facts:
+  - icon: fa-solid fa-briefcase
+    text: Wireless Systems Engineer, Apple, 2026&ndash;present
+  - icon: fa-solid fa-graduation-cap
+    text: PhD, Electrical &amp; Computer Engineering, Virginia Tech (Wireless@VT), 2021&ndash;2026
+  - icon: fa-solid fa-graduation-cap
+    text: M.Tech., Communications &amp; Signal Processing, IIIT Delhi, 2017&ndash;2019
+  - icon: fa-solid fa-graduation-cap
+    text: B.E. (Hons.), Electrical &amp; Electronics Engineering, BITS Pilani, Hyderabad, 2009&ndash;2013
+
+buttons:
+  - label: CV
+    icon: fa-solid fa-file-lines
+    url: /assets/pdf/Gaurav_duggal_full_resume.pdf
+    primary: true
+  - label: Scholar
+    icon: ai ai-google-scholar
+    url: https://scholar.google.com/citations?user=OklRZKgAAAAJ
+  - label: LinkedIn
+    icon: fa-brands fa-linkedin
+    url: https://www.linkedin.com/in/gaurav-duggal-09416157
+  - label: GitHub
+    icon: fa-brands fa-github
+    url: https://github.com/gauravduggal
+  - label: Email
+    icon: fa-solid fa-envelope
+    url: mailto:gduggal1729@gmail.com

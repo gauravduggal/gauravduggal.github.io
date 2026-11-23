@@ -1,0 +1,5 @@
+{%- comment -%}
+  SECTION "news". Keys: limit, highlights_only, images, group_by_year
+  (see _includes/gd/news/list.liquid).
+{%- endcomment -%}
+{% include gd/news/list.liquid count=include.section.limit highlights_only=include.section.highlights_only images=include.section.images group_by_year=include.section.group_by_year %}

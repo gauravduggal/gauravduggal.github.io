@@ -1,0 +1,162 @@
+/*******************************************************************************
+ * TILE: shared card (image left, text right).
+ * Markup: _includes/gd/ui/tile.liquid
+ *
+ *   .gd-tile                  the card
+ *   .gd-tile--md / --sm       variant: tall full-bleed image (highlights) / compact inset thumbnail (papers)
+ *   .gd-tile--no-media        no image: text spans the card
+ *   .gd-tile--link            whole card is clickable (title link stretched over it) + hover state
+ *   .gd-tile__media           the picture (see components/_media.scss for fit/cover)
+ *   .gd-tile__body            text column
+ *   .gd-tile__title / __link / __authors / __venue / __note / __desc / __links
+ *
+ * Variants only set CSS variables, so a new variant is just a new modifier block.
+ ******************************************************************************/
+
+.gd-tile-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.gd-tile {
+  --tile-media-w: 180px;
+  --tile-media-h: 135px;
+  --tile-pad: 0;
+  --tile-gap: 0;
+
+  position: relative; /* anchor for the stretched link */
+  display: grid;
+  grid-template-columns: var(--tile-media-w) minmax(0, 1fr);
+  gap: var(--tile-gap);
+  padding: var(--tile-pad);
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--gd-border);
+  background: var(--gd-surface);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+.gd-tile:hover {
+  border-color: var(--gd-accent);
+  box-shadow: var(--gd-shadow);
+}
+.gd-tile--no-media {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* ---------- Sizes ---------- */
+.gd-tile--md .gd-tile__media {
+  width: var(--tile-media-w);
+  height: 100%;
+  min-height: var(--tile-media-h);
+  border-right: 1px solid var(--gd-border);
+}
+.gd-tile--md .gd-tile__body {
+  padding: 0.8rem 1.1rem;
+}
+
+.gd-tile--sm {
+  --tile-media-w: 150px;
+  --tile-media-h: 112px;
+  --tile-pad: 0.9rem 1.1rem;
+  --tile-gap: 1.1rem;
+  align-items: center;
+  border-radius: 12px;
+}
+.gd-tile--sm .gd-tile__media {
+  width: var(--tile-media-w);
+  height: var(--tile-media-h);
+  border: 1px solid var(--gd-border);
+  border-radius: 8px;
+}
+
+/* ---------- Text ---------- */
+.gd-tile__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.gd-tile__title {
+  margin: 0 0 0.15rem;
+  font-size: 1.02rem !important;
+  font-weight: 650;
+  line-height: 1.35;
+}
+.gd-tile__authors,
+.gd-tile__venue,
+.gd-tile__note,
+.gd-tile__desc {
+  margin: 0 0 0.3rem !important;
+  line-height: 1.45;
+}
+.gd-tile__authors {
+  font-size: 0.82rem;
+  color: var(--gd-muted);
+}
+.gd-tile__authors strong {
+  color: var(--gd-text);
+}
+.gd-tile__venue {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gd-accent-2);
+}
+.gd-tile__note {
+  font-size: 0.8rem;
+  color: var(--gd-muted);
+}
+.gd-tile__desc {
+  font-size: 0.9rem;
+}
+.gd-tile__links {
+  margin: 0.1rem 0 0 !important;
+}
+.gd-tile__body > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ---------- Whole-card link ---------- */
+.gd-tile__link {
+  color: var(--gd-text);
+  text-decoration: none;
+}
+.gd-tile__link::after {
+  /* stretch the title link over the whole card */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.gd-tile--link:hover {
+  transform: translateY(-2px);
+  background: var(--gd-accent-soft);
+}
+.gd-tile--link:hover .gd-tile__link {
+  color: var(--gd-accent);
+  text-decoration: none;
+}
+/* links inside a clickable card keep their own click */
+.gd-tile__links,
+.gd-tile__authors a,
+.gd-tile__desc a {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 640px) {
+  .gd-tile--md {
+    --tile-media-w: 110px;
+    --tile-media-h: 0px;
+  }
+  .gd-tile--sm {
+    --tile-media-w: 92px;
+    --tile-media-h: 70px;
+    --tile-gap: 0.8rem;
+    align-items: start;
+  }
+}
