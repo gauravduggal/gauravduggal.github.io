@@ -2,12 +2,10 @@
   "basics": {
     "name": "Gaurav Duggal",
     "label": "Wireless Systems Engineer, Apple",
-    "email": "gduggal@vt.edu",
+    "email": "gduggal1729@gmail.com",
     "url": "https://gauravduggal.github.io/",
     "summary": "Wireless Systems Engineer at Apple. PhD in Electrical and Computer Engineering, Virginia Tech (Wireless@VT). Wireless localization for public safety and next-generation emergency networks.",
     "location": {
-      "city": "Blacksburg",
-      "region": "Virginia",
       "countryCode": "US"
     },
     "profiles": [

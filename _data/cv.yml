@@ -1,82 +1,108 @@
-# CV data for Gaurav Duggal — al-folio v1 (RenderCV / JSONResume format in _data/cv.yml)
+# CV data for Gaurav Duggal — al-folio v1 format (top-level `cv:` key).
 # Advisors: Jeffrey H. Reed, R. Michael Buehrer, Harpreet S. Dhillon ONLY.
 # Nishith Tripathi is not listed here — he is a co-author, not a supervisor.
-- title: General
-  type: map
-  contents:
-    - name: Full Name
-      value: Gaurav Duggal
-    - name: Email
-      value: gduggal@vt.edu
-    - name: Personal Email
-      value: gduggal1729@gmail.com
-    - name: Website
-      value: https://gauravduggal.github.io/
-    - name: Google Scholar
-      value: https://scholar.google.co.in/citations?user=OklRZKgAAAAJ&hl=en
-    - name: LinkedIn
-      value: https://www.linkedin.com/in/gaurav-duggal-09416157/
-    - name: GitHub
-      value: https://github.com/gauravduggal
-    - name: ORCID
-      value: https://orcid.org/0000-0002-3765-5479
+cv:
+  name: Gaurav Duggal
+  label: Wireless Systems Engineer, Apple
+  email: gduggal1729@gmail.com
+  location: ""
+  summary: Wireless Systems Engineer at Apple. PhD in Electrical and Computer Engineering, Virginia Tech (Wireless@VT). Wireless localization for public safety and next-generation emergency networks.
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD, Electrical and Computer Engineering
-      institution: Virginia Tech (Wireless@VT)
-      year: 2021–2026
-      description:
-        - Thesis: "Wireless Localization in Next-Generation Emergency Networks"
-        - Advisors: Jeffrey H. Reed, R. Michael Buehrer, Harpreet S. Dhillon
-    - title: M.Tech., Communications and Signal Processing
-      institution: IIIT Delhi
-      year: 2017–2019
-      description:
-        - Thesis: Automotive Radar Signal Processing
-        - Advisor: Prof. Shobha Sundar Ram
-    - title: B.E. (Hons.), Electrical and Electronics Engineering
-      institution: BITS Pilani, Hyderabad Campus
-      year: 2009–2013
+  social_networks:
+    - network: GitHub
+      username: gauravduggal
+    - network: LinkedIn
+      username: gaurav-duggal-09416157
+    - network: Google Scholar
+      username: OklRZKgAAAAJ
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Wireless Systems Engineer
-      institution: Apple
-      year: Jul 2026–present
-      description:
-        - RF front-end systems for cellular connectivity
-    - title: Graduate Research Assistant
-      institution: Virginia Tech, Wireless@VT
-      year: Aug 2021–present
-    - title: ML and Signal Processing Research Intern
-      institution: NXP Semiconductor
-      year: Summer 2025
-      description:
-        - MIMO-OFDM WiFi gesture detection
-    - title: Research Intern
-      institution: Samsung Research America
-      year: Summer 2022, 2023
-    - title: RF Software Engineer
-      institution: Qualcomm
-      year: Jul 2019–Aug 2021
+  sections:
+    Education:
+      - institution: Virginia Tech (Wireless@VT)
+        location: Blacksburg, VA
+        area: Electrical and Computer Engineering
+        studyType: PhD
+        start_date: 2021
+        end_date: 2026
+        highlights:
+          - Thesis: "Wireless Localization in Next-Generation Emergency Networks"
+          - Advisors: Jeffrey H. Reed, R. Michael Buehrer, Harpreet S. Dhillon
 
-- title: Awards and Fellowships
-  type: time_table
-  contents:
-    - title: Paul E. Torgersen Graduate Student Research Excellence Award, 1st place PhD
-      institution: Virginia Tech College of Engineering
-      year: 2026
-    - title: NIJ FY23 Graduate Research Fellowship ($166,500) — "Next Generation Emergency Networks"
-      institution: U.S. Department of Justice / National Institute of Justice, Award 15PNIJ-23-GG-01949-RESS
-      year: 2023–2026
-    - title: Pratt Fellowship ($1,000)
-      year: 2026
-    - title: Commonwealth Cyber Initiative Cyber Innovation Scholar ($2,000/yr)
-      year: 2024, 2025
-    - title: IEEE ComSoc Travel Grant ($1,250)
-      year: 2023
-    - title: Qualcomm Innovation Fellowship, finalist — "Joint radar-communication based wireless localisation"
-      year: 2022
+      - institution: IIIT Delhi
+        location: New Delhi, India
+        area: Communications and Signal Processing
+        studyType: M.Tech.
+        start_date: 2017
+        end_date: 2019
+        highlights:
+          - Thesis: Automotive Radar Signal Processing
+          - Advisor: Prof. Shobha Sundar Ram
+
+      - institution: BITS Pilani, Hyderabad Campus
+        location: Hyderabad, India
+        area: Electrical and Electronics Engineering
+        studyType: B.E. (Hons.)
+        start_date: 2009
+        end_date: 2013
+
+    Experience:
+      - company: Apple
+        position: Wireless Systems Engineer
+        start_date: Jul 2026
+        end_date: present
+        highlights:
+          - RF front-end systems for cellular connectivity
+
+      - company: Virginia Tech, Wireless@VT
+        position: Graduate Research Assistant
+        start_date: Aug 2021
+        end_date: 2026
+        highlights:
+          - Wireless localization for public safety and next-generation emergency networks
+
+      - company: NXP Semiconductor
+        position: ML and Signal Processing Research Intern
+        start_date: Summer 2025
+        end_date: Summer 2025
+        highlights:
+          - MIMO-OFDM WiFi gesture detection
+
+      - company: Samsung Research America
+        position: Research Intern
+        start_date: Summer 2022
+        end_date: Summer 2023
+
+      - company: Qualcomm
+        position: RF Software Engineer
+        start_date: Jul 2019
+        end_date: Aug 2021
+
+    Awards:
+      - title: Paul E. Torgersen Graduate Student Research Excellence Award, 1st place PhD
+        date: 2026
+        awarder: Virginia Tech College of Engineering
+        url: https://news.vt.edu/articles/2026/04/eng-coe-torgersen-research-winners-2026.html
+        summary: First place, PhD category.
+
+      - title: NIJ FY23 Graduate Research Fellowship ($166,500)
+        date: 2023-2026
+        awarder: U.S. Department of Justice / National Institute of Justice
+        url: https://nij.ojp.gov/funding/fellowships/graduate-research-fellowship-program-past-and-present-fellows
+        summary: '"Next Generation Emergency Networks" (Award 15PNIJ-23-GG-01949-RESS).'
+
+      - title: Pratt Fellowship ($1,000)
+        date: 2026
+        awarder: Virginia Tech
+
+      - title: Commonwealth Cyber Initiative Cyber Innovation Scholar ($2,000/yr)
+        date: 2024-2025
+        awarder: Commonwealth Cyber Initiative
+
+      - title: IEEE ComSoc Travel Grant ($1,250)
+        date: 2023
+        awarder: IEEE Communications Society
+
+      - title: Qualcomm Innovation Fellowship, finalist
+        date: 2022
+        awarder: Qualcomm
+        summary: "Joint radar-communication based wireless localisation."

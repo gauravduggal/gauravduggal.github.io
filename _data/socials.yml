@@ -4,7 +4,7 @@
 # Full URLs as keys (google-scholar, linkedin, github, orcid) crash the build
 # with "undefined method `split' for nil" in jekyll-socials.
 cv_pdf: /assets/pdf/Gaurav_duggal_full_resume.pdf
-email: gduggal@vt.edu
+email: gduggal1729@gmail.com
 scholar_userid: OklRZKgAAAAJ
 linkedin_username: gaurav-duggal-09416157
 github_username: gauravduggal
