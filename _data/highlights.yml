@@ -55,7 +55,7 @@
   links:
     - { label: Paper, url: "https://doi.org/10.1109/TSP.2026.3732260" }
 
-- title: Doppler-Resilient 802.11ad-Based Automotive Joint Radar-Communications
+- title: Doppler-resilient 802.11ad-based ultrashort range automotive joint radar-communications system
   image: /assets/img/research/hl_radar.jpg
   image_alt: Range-Doppler map from the 802.11ad-based automotive radar
   image_fit: true

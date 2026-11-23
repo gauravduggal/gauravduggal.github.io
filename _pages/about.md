@@ -43,3 +43,5 @@ I applied **signal processing** to design a Doppler-resilient IEEE 802.11ad wave
 built on it.
 
 Outside work, I enjoy riding bikes. You can find my rides on [Strava](https://www.strava.com/athletes/3352010) and [YouTube](https://www.youtube.com/@gauravduggal).
+
+You can reach me at [gduggal1729@gmail.com](mailto:gduggal1729@gmail.com) or [gduggal@vt.edu](mailto:gduggal@vt.edu).
